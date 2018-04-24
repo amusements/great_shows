@@ -1,3 +1,0 @@
-Edit Linda.txt file by vim
-
-Edited by Daniel 3/26 2018
