@@ -10,7 +10,7 @@
 #   16
 #   25
 squares = []
-for x in range (21):
+for x in range (1,21):
     squares.append(x**2)
 print (squares[0:6])
 
