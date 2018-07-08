@@ -12,7 +12,7 @@
 squares = []
 for x in range (1,21):
     squares.append(x**2)
-print (squares[0:6])
+print (squares[0:5])
 
 # Q2: Base on Q1, please print the 11th element.
 # Hint:

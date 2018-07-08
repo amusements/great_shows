@@ -1,5 +1,4 @@
 big_box = ["Orchild", "Mickey Mouse", "Orange", "Cat", "Cow", "Leon Tree", "Red Pepper"]
-animals = ["Mickey Mouse", "Cat", "Cow"]
 for obj in big_box:
     if (obj == "Mickey Mouse" or obj == "Cat" or obj == "Cow"):
         continue
