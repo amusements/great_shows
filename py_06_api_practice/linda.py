@@ -1,3 +1,7 @@
+StartDate = input('輸入開始時間：')
+EndDate = input('輸入結束時間：')
+Location = input('輸入地點：')
+import datetime
 import urllib.request
 import json
 response = urllib.request.urlopen('https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=2')
@@ -10,6 +14,9 @@ for dataDict in responseJason:
 		location = infoDict["location"]
 		locationName = infoDict["locationName"]
 		dramaDic = {"title": title, "time": time, "location": location, "locationName": locationName}
+	if (time >= StartDate and time <= EndDate) or (location == Location) :
 		print("Drama Title: "+title)
 		print("Location: {0} ({1})".format(locationName, location))
 		print("Performance time: "+time)
+	else:
+		print("找不到資料")
