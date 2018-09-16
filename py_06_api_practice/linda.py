@@ -1,6 +1,13 @@
 StartDate = input('輸入開始時間：')
 EndDate = input('輸入結束時間：')
 Location = input('輸入地點：')
+import re
+timeRegular = re.compile(('[0-1][0-9]|2[0-3])\/[0-5][0-9]\/[0-5][0-9]')
+timeMatch = timeRegular.match(StartDate,EndDate)
+if timeMatch:
+
+else:
+	print ("error!")
 import datetime
 import urllib.request
 import json
