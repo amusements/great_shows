@@ -21,14 +21,12 @@ con = lite.connect('lily.db')
 with con:
  
     cur = con.cursor()    
-   # cur.execute("CREATE TABLE DRAMA (UID INT, title TEXT, category TEXT)")
-   # cur.execute("INSERT INTO DRAMA VALUES ('UID','title', 'category')") 
-    
-    cur.execute("INSERT INTO DRAMA(UID,title, category) VALUES (%s, %s, %s)")
+   # cur.execute("CREATE TABLE DRAMA (UID INT, title TEXT, category TEXT)")   
 
-    cur.execute("SELECT * FROM DRAMA")
+    cur.execute("INSERT INTO DRAMA VALUES ('"+UID+"', '"+title+"', '"+category+"')")
+
+    cur.execute("SELECT COUNT(*) FROM DRAMA")
  
-    rows = cur.fetchall()
- 
-    for row in rows:
-        print (row)
+    rows_count = cur.fetchall()
+
+    print (rows_count)
